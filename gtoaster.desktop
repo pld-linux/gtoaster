@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=Gnome Toaster
+Encoding=UTF-8
+Name=GNOME Toaster
 Type=Application
 Comment=A frontend for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
 Comment[de]=Vielseitige CD Brennen Software
@@ -7,6 +8,5 @@ Comment[pl]=Nakładka na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
 Exec=gtoaster
 Icon=gtoaster.png
 Terminal=false
-Encoding=UTF-8
-Categories=Utility;X-CD-RW;
+Categories=Utility;DiscBurning;
 # vi: encoding=utf-8
