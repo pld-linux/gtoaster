@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gnome Toaster
+Type=Application
+Comment=A frontend for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+Comment[pl]=Nak³adka na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+Exec=gtoaster
+Icon=gtoaster.png
+Terminal=0
