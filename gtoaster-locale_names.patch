@@ -1,0 +1,22 @@
+--- gtoaster/configure.in~	Mon Jul 26 10:42:35 2004
++++ gtoaster/configure.in	Mon Jul 26 10:42:35 2004
+@@ -211,7 +211,7 @@
+ 
+ dnl configure gettext support
+ 
+-ALL_LINGUAS="de ja no fr fi ro hu lt ru ca"
++ALL_LINGUAS="de ja nb fr fi ro hu lt ru ca"
+ 
+ AM_GNU_GETTEXT
+ AC_DEFINE(HAVE_CATGETS)
+--- gtoaster/configure~	Mon Jul 26 10:42:38 2004
++++ gtoaster/configure	Mon Jul 26 10:42:38 2004
+@@ -4781,7 +4781,7 @@
+ 
+ 
+ 
+-ALL_LINGUAS="de ja no fr fi ro hu lt ru ca"
++ALL_LINGUAS="de ja nb fr fi ro hu lt ru ca"
+ 
+ 
+         MKINSTALLDIRS=
