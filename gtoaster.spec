@@ -1,7 +1,7 @@
 Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
-Version:	1.0Beta2
+Version:	1.0Beta3
 Release:	1
 Epoch:		1
 License:	GPL
@@ -22,6 +22,7 @@ BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 Gnome Toaster is a cd creation suite for the famous Linux operating
@@ -49,6 +50,7 @@ automake -a -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
         $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
@@ -65,7 +67,7 @@ gzip -9nf README TODO
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -n %{name}
+%files -n %{name} -f %{name}.lang
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
