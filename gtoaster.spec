@@ -6,6 +6,8 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
+Group(de):	X11/Applikationen/Multimedia
+Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://gnometoaster.rulez.org/archive/%{name}%{version}.tgz
 Source1:	%{name}.desktop
 URL:		http://gnometoaster.rulez.org/
@@ -24,14 +26,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Gnome Toaster is a cd creation suite for the famous Linux operating
 System. Thought to be as user-friendly as possible it lets you create
-cd recordables with just a few simple mouse clicks. Create your CDs
-by simply dragging the desired contents onto it's display window.   
+cd recordables with just a few simple mouse clicks. Create your CDs by
+simply dragging the desired contents onto it's display window.
 
 %description -l pl
-Gnome Toaster pozwala w wyj±tkowo prosty sposób na tworzenie
-p³yt CD-R za pomoc± kilku klikniêæ. Tworzenie zawarto¶ci p³yty
-odbywa siê za pomoc± przeci±gania i upuszczania plików, katalogów
-w oknie programu.
+Gnome Toaster pozwala w wyj±tkowo prosty sposób na tworzenie p³yt CD-R
+za pomoc± kilku klikniêæ. Tworzenie zawarto¶ci p³yty odbywa siê za
+pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 
 %prep
 %setup -q -n %{name}
