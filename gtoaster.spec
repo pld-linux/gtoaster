@@ -1,5 +1,5 @@
-Summary:	A GNOME frontend for cdrecord.
-Summary(pl):	Nak³adka GNOME na program cdrecord.
+Summary:	A GNOME frontend for cdrecord
+Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
 Version:	2001010715
 Release:	1
@@ -12,7 +12,6 @@ BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	ORBit-devel
 BuildRequires:	esound-devel
 BuildRequires:	imlib-devel
-BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -40,13 +39,12 @@ gettextize -c -f
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 	
-install .xvpics/*.xpm	$RPM_BUILD_ROOT%{_datadir}/pixmaps
+install .xvpics/*.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf README TODO
 
@@ -59,4 +57,4 @@ gzip -9nf README TODO
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
