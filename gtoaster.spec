@@ -40,8 +40,8 @@ pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 rm -f missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
