@@ -6,6 +6,6 @@ Comment[de]=Vielseitige CD Brennen Software
 Comment[pl]=Nakładka na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
 Exec=gtoaster
 Icon=gtoaster.png
-Terminal=0
+Terminal=false
 Encoding=UTF-8
 # vi: encoding=utf-8
