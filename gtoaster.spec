@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/gtoaster/%{name}%{version}.tgz
+Source1:	%{name}.desktop
 URL:		http://gnometoaster.rulez.org/
 BuildRequires:	gnome-libs-devel >= 1.0.54
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -38,13 +39,16 @@ w oknie programu.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
+        $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT 
 	
 install .xvpics/*.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
-
+install icons/gtoaster.png $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
+ 
 gzip -9nf README TODO
 
 #%find_lang %{name} --with-gnome
@@ -56,4 +60,5 @@ gzip -9nf README TODO
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
+%{_applnkdir}/Utilities/CD-RW/gtoaster.desktop
 %{_pixmapsdir}/*
