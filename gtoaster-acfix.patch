@@ -1,0 +1,23 @@
+--- gtoaster/configure.in.orig	Sun Sep  1 09:38:24 2002
++++ gtoaster/configure.in	Thu Apr 17 16:16:58 2003
+@@ -219,18 +219,12 @@
+ AC_DEFINE(HAVE_LC_MESSAGES)
+ AC_DEFINE(HAVE_STPCPY)
+ 
+-dnl Whatever the hell this is for, it seems to be required by gettext
+-CATALOGS=""
+-AC_SUBST(CATALOGS)
+ 
+ 
+ localedir=${datadir}/locale
+ AC_SUBST(localedir)
+ 
+-AC_OUTPUT([Makefile m4/Makefile  intl/Makefile  po/Makefile.in 
++AC_OUTPUT([Makefile m4/Makefile
+           po/Makefile.in
+ 			 gtoaster.spec
+-	  intl/Makefile],
+-	  [touch Makefile.in
+-	  sed -e "/POTFILES =/r po/POTFILES" po/Makefile.in >po/Makefile]
+-	  )
++	  intl/Makefile])

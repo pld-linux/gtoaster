@@ -1,0 +1,42 @@
+--- gtoaster/po/ja.po.orig	Wed Aug 28 08:50:17 2002
++++ gtoaster/po/ja.po	Thu Apr 17 16:21:42 2003
+@@ -716,10 +716,6 @@
+ "else. Please also note that you need write access to this\n"
+ "directory from the user account that is running gnometoaster."
+ msgstr ""
+-"'fsedit' \n"
+-"\n"
+-"Gometoaster \n"
+-""
+ 
+ #: preferences.c:322 preferences.c:323 preferences.c:362 preferences.c:377
+ #: preferences.c:391
+@@ -754,8 +750,6 @@
+ "\n"
+ "Child exited unexpectedly."
+ msgstr ""
+-"\n"
+-""
+ 
+ #: record.c:132 record.c:150 record.c:151
+ msgid "CD recording process finished."
+@@ -813,8 +807,6 @@
+ "Preview Player active,\n"
+ "recording process cancelled."
+ msgstr ""
+-"\n"
+-""
+ 
+ #: record.c:757 record.c:781 record.c:796 record.c:811
+ msgid "CDRW blanking complete."
+--- gtoaster/po/lt.po.orig	Wed Aug 28 08:50:18 2002
++++ gtoaster/po/lt.po	Thu Apr 17 16:23:29 2003
+@@ -384,7 +384,7 @@
+ #: datacopydlg.c:172
+ #, c-format
+ msgid "(%.0f%% done) %s"
+-msgstr "(%.i%% atlikta) %s"
++msgstr "(%.0f%% atlikta) %s"
+ 
+ #: datacopydlg.c:287
+ msgid "please wait..."
