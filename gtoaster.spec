@@ -1,7 +1,7 @@
 Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
-Version:	2001010715
+Version:	1.0Beta2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -32,9 +32,8 @@ w oknie programu.
 %setup -q -n %{name}
 
 %build
-gettextize -c -f
-%configure \
-	--enable-nls
+%configure2_13
+	
 %{__make}
 
 %install
@@ -48,7 +47,7 @@ install .xvpics/*.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf README TODO
 
-%find_lang %{name} --with-gnome
+#%find_lang %{name} --with-gnome
 
 %clean
 #rm -rf $RPM_BUILD_ROOT
