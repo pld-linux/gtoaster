@@ -50,7 +50,6 @@ automake -a -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
         $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
