@@ -1,8 +1,8 @@
 Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
-Version:	1.0Beta5
-Release:	2
+Version:	1.0Beta6
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -36,10 +36,10 @@ pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 
 %build
 rm -f missing
-%{__gettextize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
+#%%{__gettextize}
+#%%{__aclocal}
+#%%{__autoconf}
+#%%{__automake}
 %configure
 
 %{__make}
@@ -55,12 +55,13 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
 install icons/gtoaster.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
-%find_lang %{name} --with-gnome
+#%%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -n %{name} -f %{name}.lang
+#%%files -n %{name} -f %{name}.lang
+%files -n %{name}
 %defattr(644,root,root,755)
 %doc  README TODO
 %attr(755,root,root) %{_bindir}/*
