@@ -2,6 +2,7 @@
 Name=Gnome Toaster
 Type=Application
 Comment=A frontend for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+COmment[de]=Vielseitige CD Brennen Software
 Comment[pl]=Nak³adka na mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
 Exec=gtoaster
 Icon=gtoaster.png
