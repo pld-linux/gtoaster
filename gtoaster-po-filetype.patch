@@ -1,0 +1,12 @@
+diff -Nur gtoaster.orig/filelist.c gtoaster.new/filelist.c
+--- gtoaster.orig/filelist.c	2002-08-07 19:58:13.000000000 +0200
++++ gtoaster.new/filelist.c	2004-12-12 18:07:51.298847240 +0100
+@@ -28,7 +28,7 @@
+ const char *filelist_headings[]=
+ {
+    N_("Filename"),
+-   "",
++   " ",
+      N_("Filesize"),
+    NULL
+ };
