@@ -24,9 +24,9 @@ BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GNOME Toaster is a cd creation suite for the famous Linux operating
+GNOME Toaster is a CD creation suite for the famous Linux operating
 System. Thought to be as user-friendly as possible it lets you create
-cd recordables with just a few simple mouse clicks. Create your CDs by
+CD recordables with just a few simple mouse clicks. Create your CDs by
 simply dragging the desired contents onto it's display window.
 
 %description -l pl
@@ -68,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc  README TODO
+%doc README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Utilities/CD-RW/gtoaster.desktop
 %{_pixmapsdir}/*
