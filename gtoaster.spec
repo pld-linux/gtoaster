@@ -1,7 +1,7 @@
 Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
-Version:	1.0Beta3
+Version:	1.0Beta5
 Release:	1
 Epoch:		1
 License:	GPL
