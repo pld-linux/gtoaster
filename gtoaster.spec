@@ -6,13 +6,16 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/gtoaster/%{name}%{version}.tgz
+Source0:	http://gnometoaster.rulez.org/archive/%{name}%{version}.tgz
 Source1:	%{name}.desktop
 URL:		http://gnometoaster.rulez.org/
+BuildRequires:	ORBit-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	esound-devel
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.0.54
 BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	ORBit-devel
-BuildRequires:	esound-devel
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,7 +37,12 @@ w oknie programu.
 %setup -q -n %{name}
 
 %build
-%configure2_13
+rm -f missing
+gettextize --copy --force
+aclocal
+autoconf
+automake -a -c
+%configure
 	
 %{__make}
 
@@ -46,16 +54,15 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT 
 	
-install .xvpics/*.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 install icons/gtoaster.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
  
 gzip -9nf README TODO
 
-#%find_lang %{name} --with-gnome
+%find_lang %{name} --with-gnome
 
 %clean
-#rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files -n %{name}
 %defattr(644,root,root,755)
