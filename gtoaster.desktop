@@ -8,4 +8,5 @@ Exec=gtoaster
 Icon=gtoaster.png
 Terminal=false
 Encoding=UTF-8
+Categories=Utility;X-CD-RW;
 # vi: encoding=utf-8
