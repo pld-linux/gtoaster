@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _with_gnome - build with GNOME1 support
+#
 Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
@@ -18,7 +22,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	esound-devel
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel >= 1.0.54
+%{?_with_gnome:BuildRequires:	gnome-libs-devel >= 1.0.54}
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -46,14 +50,15 @@ rm -f missing
 %{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{!?_with_gnome:--without-gnome}
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
-        $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
+	$RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
