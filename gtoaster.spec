@@ -3,6 +3,7 @@ Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
 Version:	1.0Beta2
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/gtoaster/%{name}%{version}.tgz
