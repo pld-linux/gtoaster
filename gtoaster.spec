@@ -6,8 +6,6 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Group(de):	X11/Applikationen/Multimedia
-Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://gnometoaster.rulez.org/archive/%{name}%{version}.tgz
 Source1:	%{name}.desktop
 URL:		http://gnometoaster.rulez.org/
