@@ -39,7 +39,7 @@ pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 %build
 rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
