@@ -43,7 +43,7 @@ aclocal
 autoconf
 automake -a -c
 %configure
-	
+
 %{__make}
 
 %install
@@ -52,11 +52,11 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir} \
         $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT 
-	
+	DESTDIR=$RPM_BUILD_ROOT
+
 install icons/gtoaster.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities/CD-RW
- 
+
 gzip -9nf README TODO
 
 %find_lang %{name} --with-gnome
