@@ -38,7 +38,7 @@ pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 
 %build
 rm -f missing
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
