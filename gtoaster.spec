@@ -17,6 +17,7 @@ Patch0:		%{name}-acfix.patch
 Patch1:		%{name}-pofix.patch
 Patch2:		%{name}-po-fix.patch
 Patch3:		%{name}-locale_names.patch
+Patch4:		%{name}-po-filetype.patch
 URL:		http://gnometoaster.rulez.org/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
@@ -45,6 +46,7 @@ pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 mv -f po/{no,nb}.po
 
