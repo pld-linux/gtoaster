@@ -11,7 +11,7 @@ Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://gnometoaster.rulez.org/archive/%{name}%{version}.tgz
-# Source0-md5: 89256dbb2bedfbc44337aa6980e6fb93
+# Source0-md5:	89256dbb2bedfbc44337aa6980e6fb93
 Source1:	%{name}.desktop
 Patch0:		%{name}-acfix.patch
 Patch1:		%{name}-pofix.patch
