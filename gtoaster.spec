@@ -6,7 +6,7 @@ Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
 Name:		gtoaster
 Version:	1.0Beta6
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -16,6 +16,7 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-acfix.patch
 Patch1:		%{name}-pofix.patch
 Patch2:		%{name}-po-fix.patch
+Patch3:		%{name}-locale_names.patch
 URL:		http://gnometoaster.rulez.org/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
@@ -43,6 +44,9 @@ pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+
+mv -f po/{no,nb}.po
 
 %build
 rm -f missing
