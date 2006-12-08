@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_gnome - build with GNOME1 support
+%bcond_with	gnome		# build with GNOME1 support
 #
 Summary:	A GNOME frontend for cdrecord
 Summary(pl):	Nak³adka GNOME na program cdrecord
@@ -24,7 +24,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	esound-devel
 BuildRequires:	gettext-devel
-%{?_with_gnome:BuildRequires:	gnome-libs-devel >= 1.0.54}
+%{?with_gnome:BuildRequires:	gnome-libs-devel >= 1.0.54}
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -57,7 +57,7 @@ rm -f missing
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?_with_gnome:--without-gnome}
+	%{!?with_gnome:--without-gnome}
 
 %{__make}
 
