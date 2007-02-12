@@ -3,7 +3,7 @@
 %bcond_with	gnome		# build with GNOME1 support
 #
 Summary:	A GNOME frontend for cdrecord
-Summary(pl):	Nak³adka GNOME na program cdrecord
+Summary(pl.UTF-8):   NakÅ‚adka GNOME na program cdrecord
 Name:		gtoaster
 Version:	1.0Beta6
 Release:	7
@@ -35,10 +35,10 @@ System. Thought to be as user-friendly as possible it lets you create
 CD recordables with just a few simple mouse clicks. Create your CDs by
 simply dragging the desired contents onto it's display window.
 
-%description -l pl
-GNOME Toaster pozwala w wyj±tkowo prosty sposób na tworzenie p³yt CD-R
-za pomoc± kilku klikniêæ. Tworzenie zawarto¶ci p³yty odbywa siê za
-pomoc± przeci±gania i upuszczania plików, katalogów w oknie programu.
+%description -l pl.UTF-8
+GNOME Toaster pozwala w wyjÄ…tkowo prosty sposÃ³b na tworzenie pÅ‚yt CD-R
+za pomocÄ… kilku klikniÄ™Ä‡. Tworzenie zawartoÅ›ci pÅ‚yty odbywa siÄ™ za
+pomocÄ… przeciÄ…gania i upuszczania plikÃ³w, katalogÃ³w w oknie programu.
 
 %prep
 %setup -q -n %{name}
