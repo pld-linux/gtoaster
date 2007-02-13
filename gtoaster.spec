@@ -3,7 +3,7 @@
 %bcond_with	gnome		# build with GNOME1 support
 #
 Summary:	A GNOME frontend for cdrecord
-Summary(pl.UTF-8):   Nakładka GNOME na program cdrecord
+Summary(pl.UTF-8):	Nakładka GNOME na program cdrecord
 Name:		gtoaster
 Version:	1.0Beta6
 Release:	7
