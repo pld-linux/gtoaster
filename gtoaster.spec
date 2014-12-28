@@ -23,7 +23,7 @@ BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	esound-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 %{?with_gnome:BuildRequires:	gnome-libs-devel >= 1.0.54}
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
